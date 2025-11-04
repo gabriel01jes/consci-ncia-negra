@@ -1,20 +1,41 @@
-// Código para mudar a cor de fundo do site ao clicar em um botão
-document.addEventListener('DOMContentLoaded', function() {
-  const body = document.querySelector('body');
-  const changeColorButton = document.createElement('button');
-  changeColorButton.textContent = "Mudar cor de fundo";
-  changeColorButton.style.padding = "10px 20px";
-  changeColorButton.style.backgroundColor = "#3f51b5";
-  changeColorButton.style.color = "white";
-  changeColorButton.style.border = "none";
-  changeColorButton.style.cursor = "pointer";
-  changeColorButton.style.marginTop = "20px";
-  
-  document.querySelector('.container').appendChild(changeColorButton);
+// Lista com os caminhos das 16 imagens
+const fotos = [
+  "imagens/snoop1.jpg",
+  "imagens/snoop2.jpg",
+  "imagens/snoop3.jpg",
+  "imagens/snoop4.jpg",
+  "imagens/snoop5.jpg",
+  "imagens/snoop6.jpg",
+  "imagens/snoop7.jpg",
+  "imagens/snoop8.jpg",
+  "imagens/snoop9.jpg",
+  "imagens/snoop10.jpg",
+  "imagens/snoop11.jpg",
+  "imagens/snoop12.jpg",
+  "imagens/snoop13.jpg",
+  "imagens/snoop14.jpg",
+  "imagens/snoop15.jpg",
+  "imagens/snoop16.jpg"
+];
 
-  changeColorButton.addEventListener('click', function() {
-    const colors = ['#0ddfe3ff', '#0ce1d3ff', '#f0f8ff', '#f5fffa', '#f0fff0'];
-    const randomColor = colors[Math.floor(Math.random() * colors.length)];
-    body.style.backgroundColor = randomColor;
-  });
-});
+let indice = 0;
+const fotoAtual = document.getElementById("fotoAtual");
+
+function mostrarFoto() {
+  fotoAtual.src = fotos[indice];
+}
+
+// Botões de navegação
+function proximaFoto() {
+  indice = (indice + 1) % fotos.length;
+  mostrarFoto();
+}
+
+function voltarFoto() {
+  indice = (indice - 1 + fotos.length) % fotos.length;
+  mostrarFoto();
+}
+
+// Troca automática a cada 5 segundos
+setInterval(proximaFoto, 5000);
+
