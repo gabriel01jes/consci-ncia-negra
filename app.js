@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
   document.querySelector('.container').appendChild(changeColorButton);
 
   changeColorButton.addEventListener('click', function() {
-    const colors = ['#f4f4f4', '#ffe4e1', '#f0f8ff', '#f5fffa', '#f0fff0'];
+    const colors = ['#e30d0dff', '#e1220cff', '#f0f8ff', '#f5fffa', '#f0fff0'];
     const randomColor = colors[Math.floor(Math.random() * colors.length)];
     body.style.backgroundColor = randomColor;
   });
