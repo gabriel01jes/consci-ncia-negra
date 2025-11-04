@@ -1,20 +1,20 @@
 const fotos = [
-  "imagens/snoop1.jpg",
-  "imagens/snoop2.jpg",
-  "imagens/snoop3.jpg",
-  "imagens/snoop4.jpg",
-  "imagens/snoop5.jpg",
-  "imagens/snoop6.jpg",
-  "imagens/snoop7.jpg",
-  "imagens/snoop8.jpg",
-  "imagens/snoop9.jpg",
-  "imagens/snoop10.jpg",
-  "imagens/snoop11.jpg",
-  "imagens/snoop12.jpg",
-  "imagens/snoop13.jpg",
-  "imagens/snoop14.jpg",
-  "imagens/snoop15.jpg",
-  "imagens/snoop16.jpg"
+  "imagens/sp1.jpg",
+  "imagens/sp2.jpg",
+  "imagens/sp3.jpg",
+  "imagens/sp4.jpg",
+  "imagens/sp5.jpg",
+  "imagens/sp6.jpg",
+  "imagens/sp7.jpg",
+  "imagens/sp8.jpg",
+  "imagens/sp9.jpg",
+  "imagens/sp10.jpg",
+  "imagens/sp11.jpg",
+  "imagens/sp12.jpg",
+  "imagens/sp13.jpg",
+  "imagens/sp14.jpg",
+  "imagens/sp15.jpg",
+  "imagens/sp16.jpg"
 ];
 
 let indice = 0;
