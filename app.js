@@ -1,31 +1,28 @@
 const fotos = [
-  "imagens/sp1.jpg",
-  "imagens/sp2.jpg",
-  "imagens/sp3.jpg",
-  "imagens/sp4.jpg",
-  "imagens/sp5.jpg",
-  "imagens/sp6.jpg",
-  "imagens/sp7.jpg",
-  "imagens/sp8.jpg",
-  "imagens/sp9.jpg",
-  "imagens/sp10.jpg",
-  "imagens/sp11.jpg",
-  "imagens/sp12.jpg",
-  "imagens/sp13.jpg",
-  "imagens/sp14.jpg",
-  "imagens/sp15.jpg",
-  "imagens/sp16.jpg"
+  "imagens/snoop1.jpg",
+  "imagens/snoop2.jpg",
+  "imagens/snoop3.jpg",
+  "imagens/snoop4.jpg",
+  "imagens/snoop5.jpg",
+  "imagens/snoop6.jpg",
+  "imagens/snoop7.jpg",
+  "imagens/snoop8.jpg",
+  "imagens/snoop9.jpg",
+  "imagens/snoop10.jpg"
 ];
 
 let indice = 0;
 const foto = document.getElementById("fotoAtual");
+const audio = document.getElementById("audioSnoop");
+const btnMusica = document.getElementById("btnMusica");
 
+// Função para trocar imagem
 function atualizarFoto() {
   foto.classList.remove("mostrar");
   setTimeout(() => {
     foto.src = fotos[indice];
     foto.classList.add("mostrar");
-  }, 300);
+  }, 200);
 }
 
 function proximaFoto() {
@@ -38,10 +35,21 @@ function voltarFoto() {
   atualizarFoto();
 }
 
-// Troca automática a cada 4 segundos
+// Troca automática a cada 4s
 setInterval(proximaFoto, 4000);
 
-// Mostra a primeira imagem com fade
+// Música play/pause
+btnMusica.addEventListener("click", () => {
+  if (audio.paused) {
+    audio.play();
+    btnMusica.textContent = "⏸️ Pausar Música";
+  } else {
+    audio.pause();
+    btnMusica.textContent = "🎵 Tocar Música";
+  }
+});
+
+// Mostra a primeira imagem ao carregar
 window.onload = () => {
   foto.classList.add("mostrar");
 };

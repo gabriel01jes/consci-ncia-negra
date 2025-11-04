@@ -1,47 +1,53 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Snoop Dogg - O Rei do Rap</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Snoop Dogg - Lenda do Rap</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
     <h1>Snoop Dogg</h1>
-    <p>O ícone do hip-hop, do estilo e da vibe californiana 🌴</p>
+    <p>O ícone do hip-hop e do estilo West Coast 🌴</p>
   </header>
 
   <main>
-    <section class="sobre">
+    <section class="bio">
       <h2>Quem é Snoop Dogg?</h2>
       <p>
-        Calvin Cordozar Broadus Jr., mais conhecido como <strong>Snoop Dogg</strong>, nasceu em 20 de outubro de 1971, em Long Beach, Califórnia.
-        Ele começou sua carreira nos anos 90, sendo descoberto por Dr. Dre, e se tornou um dos artistas mais reconhecidos e carismáticos do rap mundial.
+        Calvin Cordozar Broadus Jr., conhecido como <strong>Snoop Dogg</strong>,
+        nasceu em 1971 em Long Beach, Califórnia. Descoberto por Dr. Dre, ele se
+        tornou um dos maiores rappers da história, com um flow único e uma presença
+        carismática que atravessa gerações.
       </p>
     </section>
 
     <section class="curiosidades">
       <h2>Curiosidades</h2>
       <ul>
-        <li>🐶 O apelido “Snoop” vem do personagem “Snoopy”, dos quadrinhos Peanuts.</li>
-        <li>🎶 Seu álbum de estreia, <em>Doggystyle</em> (1993), foi um dos discos de rap mais vendidos da história.</li>
-        <li>💨 Snoop é um dos maiores defensores da legalização da maconha nos EUA.</li>
-        <li>🎥 Já atuou em diversos filmes e até apresentou programas de TV.</li>
-        <li>🌍 É primo da cantora Brandy e do rapper Ray J.</li>
-        <li>⚽️ É fã de esportes e já treinou um time juvenil de futebol americano.</li>
-        <li>🎤 Já gravou com artistas de vários estilos, de Eminem a Katy Perry.</li>
+        <li>🎤 Seu primeiro álbum, <em>Doggystyle</em> (1993), foi um sucesso instantâneo.</li>
+        <li>🐶 O apelido "Snoop" veio de "Snoopy", personagem dos quadrinhos Peanuts.</li>
+        <li>💨 É conhecido por seu estilo relaxado e por defender a cultura canábica.</li>
+        <li>🎥 Já atuou em filmes, séries e até programas de culinária com Martha Stewart.</li>
+        <li>🌍 É um dos rappers mais influentes da história do hip-hop.</li>
       </ul>
     </section>
 
     <section class="galeria">
-      <h2>Galeria de Fotos</h2>
+      <h2>Galeria</h2>
       <div class="foto-container">
         <img id="fotoAtual" src="imagens/snoop1.jpg" alt="Snoop Dogg" />
       </div>
+
       <div class="botoes">
-        <button onclick="voltarFoto()">⬅️ Voltar</button>
-        <button onclick="proximaFoto()">Avançar ➡️</button>
+        <button onclick="voltarFoto()">⬅️ Anterior</button>
+        <button onclick="proximaFoto()">Próxima ➡️</button>
+      </div>
+
+      <div class="musica">
+        <button id="btnMusica">🎵 Tocar Música</button>
+        <audio id="audioSnoop" src="musica/snoop.mp3"></audio>
       </div>
     </section>
   </main>
@@ -51,7 +57,5 @@
   </footer>
 
   <script src="app.js"></script>
-
 </body>
 </html>
-
